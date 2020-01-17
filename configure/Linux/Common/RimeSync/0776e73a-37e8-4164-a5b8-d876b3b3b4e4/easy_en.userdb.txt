@@ -1,0 +1,19 @@
+# Rime user dictionary
+#@/db_name	easy_en.userdb
+#@/db_type	userdb
+#@/rime_version	1.5.3
+#@/tick	23
+#@/user_id	0776e73a-37e8-4164-a5b8-d876b3b3b4e4
+bell 	bell	c=1 d=0.980199 t=23
+default 	default	c=1 d=1 t=23
+f 	f	c=2 d=1.98012 t=23
+file 	file	c=1 d=0.995012 t=23
+flag 	flag	c=1 d=1 t=23
+g 	g	c=1 d=1 t=23
+is 	is	c=1 d=0.99005 t=23
+practice 	practice	c=1 d=1 t=23
+s 	s	c=1 d=1 t=23
+sound 	sound	c=1 d=0.985112 t=23
+thunder 	thunder	c=1 d=0.970446 t=23
+trumpet 	trumpet	c=1 d=0.97531 t=23
+unzip 	unzip	c=1 d=1 t=23

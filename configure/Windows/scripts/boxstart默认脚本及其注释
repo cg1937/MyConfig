@@ -1,0 +1,217 @@
+#注意删除所有中文
+#和所有的: 以及冒号后的
+
+Disable-GameBarTips
+#禁用gamebar:win10认为你在玩游戏时,会启动的一个录像和录音软件.有时我开工作软件,也会莫名弹出,直接禁用
+Enable-MicrosoftUpdate
+#自动更新
+Enable-UAC
+#运行软件时,弹窗问是否授权
+Install-WindowsUpdate
+Update-Help
+# Windows的帮助,现在开始用powershell了,这个必不可少
+Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileExtensions -EnableShowFullPathInTitleBar -EnableOpenFileExplorerToQuickAccess -EnableShowRecentFilesInQuickAccess -EnableShowFrequentFoldersInQuickAccess -EnableExpandToOpenFolder
+#资源管理器选项:很有用
+# 显示隐藏的文件和文件夹
+# 显示文件扩展名:abc.txt
+# 标题栏显示完整路径
+# 新建资源管理器不进入我的电脑,而是快速访问,个人建议去掉 -DisableOpenFileExplorerToQuickAccess
+# 快速访问显示最近文件
+# 快速访问显示常用文件夹
+# 不知道是啥,感觉开启后没啥变化
+Set-CornerNavigationOptions -EnableUpperRightCornerShowCharms -EnableUpperLeftCornerSwitchApps -EnableUsePowerShellOnWinX
+# 似乎是平板用的,最后一个挺有用:Win+X打开PowerShell
+Set-StartScreenOptions -EnableBootToDesktop -EnableDesktopBackgroundOnStart -EnableShowStartOnActiveScreen -EnableShowAppsViewOnStartScreen -EnableSearchEverywhereInAppsView -EnableListDesktopAppsFirst
+#开始菜单设计
+# 如果没有密码,直接进入桌面
+# 进入系统前右下角可以显示若干app,比如日历啥的
+# 似乎是全局搜索,我用EveryThing
+
+cinst -y boxstarter:使用脚本前就会安装的
+
+cinst -y VisualStudioCode
+
+cinst -y git
+
+cinst -y SourceTree:以上这些,就可以开始干活了
+
+cinst -y ChocolateyGUI:Chocolatey的GUI.方便查看包,
+
+cinst -y python2
+
+cinst -y golang
+
+cinst -y clisp
+
+cinst -y racket:函数式语言,生产和教学都很不错
+
+cinst -y haskell-stack
+
+cinst -y lua53
+
+cinst -y vcredist-all:一次性打包安装所有vc环境,调整安装顺序,下面php就会少安装一些
+
+cinst -y php:会自动安装vcredist140,2015,chocolatey-Windowsupdate.extension,kb3035131,kb2919355,kb2999226,kb2919442,kb3033929
+
+cinst -y nodejs
+
+cinst -y railsinstaller:要把这个里面的Git从环境变量中去掉,需要解决SSL的问题https://gist.github.com/fnichol/867550
+
+cinst -y autohotkey:自定义脚本,可以出教程
+
+cinst -y autoit:和AutoHotKey差不多也是脚本语言,更强大
+
+cinst -y beyondcompare:比DiffMerge更强大
+
+cinst -y bitvise-ssh-client:类似Xshell的终端模拟器,会安装或更新chocolatey-uninstall.extension
+
+cinst -y bitvise-ssh-server
+
+cinst -y intellijidea-ultimate
+
+cinst -y datagrip
+
+cinst -y Cygwin:Clion的环境,再手动安装gdb,make,c和c++的编译器:gcc,g++
+
+cinst -y mingw:同上
+
+cinst -y deepgit:SmartGit的配套工具,查看代码块变更的
+
+cinst -y bulkrenameutility:重命名工具
+
+cinst -y calibre:电子书管理软件
+
+cinst -y carnac:屏幕显示键盘敲击的按键
+
+cinst -y ccleaner:清理软件
+
+cinst -y defraggler:清理硬盘
+
+cinst -y diffmerge
+
+cinst -y ditto:#去掉一些快捷键,和phpstorm有冲突
+
+cinst -y docker:docker的软件
+
+cinst -y docker-for-Windows:docker的客户端
+
+cinst -y Emacs
+
+cinst -y ffmpeg:视屏转换
+
+cinst -y fiddler4
+
+cinst -y foobar2000
+
+cinst -y gae.sdk:google app engine
+
+cinst -y gifcam
+
+cinst -y giteye
+
+cinst -y GoogleChrome:登陆
+
+cinst -y honeyview
+
+cinst -y Icaros:缩略图工具
+
+cinst -y internet-download-manager --ignore-checksums
+
+cinst -y keepass
+
+cinst -y Kindle
+
+cinst -y lockhunter
+
+cinst -y mysql.workbench
+
+cinst -y ngrok.portable:花生壳内网穿透
+
+cinst -y nirlauncher
+
+cinst -y nmap
+
+cinst -y notepadplusplus.install:最新版
+
+cinst -y paint.net
+
+cinst -y potplayer
+
+cinst -y Recuva:文件恢复
+
+cinst -y resilio-sync-home --ignore-checksums:给予BT的文档保存,有手机端
+
+cinst -y rufus:用于制作启动盘
+
+cinst -y sandboxie
+
+cinst -y screentogif
+
+cinst -y sigil:epub电子书管理
+
+cinst -y skype
+
+cinst -y slack
+
+cinst -y SourceTree
+
+cinst -y spacesniffer
+
+cinst -y speccy
+
+cinst -y Sudo
+
+cinst -y sysinternals
+
+cinst -y TeraCopy
+
+cinst -y testdisk-photorec:恢复软件
+
+cinst -y thunderbird:邮件客户端
+
+cinst -y tortoisesvn
+
+cinst -y TotalCommander
+
+cinst -y ultraiso --ignore-checksums :Home:4BA9-0D54-214A-C938
+cinst -y vim
+
+cinst -y win32diskimager
+
+cinst -y winmerge
+
+cinst -y winscp
+
+cinst -y wireshark
+
+cinst -y youtube-dl
+
+cinst -y teamviewer
+
+cinst -y steam
+
+cinst -y caesium.install:图片压缩工具
+
+cinst -y taskcoach:任务管理软件
+
+cinst -y formatfactory:格式工厂
+
+cinst -y simplenote:一个笔记软件,可以试试看
+
+cinst -y anydesk:远程桌面
+
+cinst -y audacity:处理音频的软件
+
+cinst -y Cmder:
+
+cinst -y eraser:删除文件
+
+cinst -y bleachbit:磁盘清理
+
+cinst -y gimp:免费的ps
+
+cinst -y reaper:音频处理
+
+cinst -y googleearthpro
+
+cinst -y 360ts:最后装,因为他会阻拦一些软件安装
