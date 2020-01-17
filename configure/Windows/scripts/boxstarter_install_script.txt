@@ -11,7 +11,6 @@ cinst -y anki
 cinst -y battle.net
 cinst -y bulkrenameutility
 cinst -y chocolateygui
-cinst -y console-devel
 cinst -y curl
 cinst -y ditto
 cinst -y Everything /run-on-system-startup /folder-context-menu
@@ -25,9 +24,7 @@ cinst -y GoogleChrome
 cinst -y mingw
 cinst -y netease-cloudmusic
 cinst -y nirlauncher
-cinst -y nodejs
 cinst -y notion
-cinst -y onenote
 cinst -y python3
 cinst -y qdir
 cinst -y qbittorrent
@@ -39,9 +36,7 @@ cinst -y telegram.install
 cinst -y tim
 cinst -y traffic-monitor
 cinst -y vcredist-all
-cinst -y vlc
 cinst -y vscode
-cinst -y win32diskimage
 cinst -y winpcap
 cinst -y wireshark
 cinst -y wox
