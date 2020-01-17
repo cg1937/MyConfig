@@ -32,7 +32,6 @@ cinst -y python3
 cinst -y qdir
 cinst -y qbittorrent
 cinst -y quicklook
-cinst -y shadowsocks
 cinst -y snipaste
 cinst -y steam
 cinst -y sumatrapdf.install
