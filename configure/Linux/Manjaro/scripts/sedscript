@@ -1,4 +1,0 @@
-s/^ZSH_THEME=\"[a-z]*\"/ZSH_THEME="agnoster"/
-s/^plugins=\(git\)$/plugins=(\n    git\n    autojump\n    zsh-syntax-highlighting\n    zsh-autosuggestions \n)/
-$a\
-eval $(thefuck --alias)

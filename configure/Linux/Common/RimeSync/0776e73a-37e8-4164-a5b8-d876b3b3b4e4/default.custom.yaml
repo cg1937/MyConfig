@@ -1,9 +1,0 @@
-patch:
-  schema_list:
-    - schema: double_pinyin_flypy
-    - schema: easy_en
-    - schema: xhup
-    - schema: xhup_express
-    - schema: xhup_fluency
-  
-  "menu/page_size": 9
