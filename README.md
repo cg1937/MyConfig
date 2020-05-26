@@ -1,2 +1,5 @@
 # OSCD
-save the configure and tools
+
+- configure
+- tool
+- note
