@@ -13,7 +13,7 @@ sudo apt-get install -y libgnutls28-dev
 
 while true:
 do
-    read -r -p "安装文泉驿-微米黑, 用于设置emacs-cnfont(需自行安装) [Y/n] " input
+    read -r -p "安装文泉驿-微米黑, 用于设置emacs-cnfonts(需自行安装) [Y/n] " input
 	case $input in
 	    [yY][eE][sS]|[yY])
 		echo "Yes"
