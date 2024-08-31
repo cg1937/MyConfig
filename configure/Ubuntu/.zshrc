@@ -119,4 +119,4 @@ if [ -x "$(command -v exa)" ]; then
     alias ls="exa --icons"
     alias ls="exa --long --all --header --group --icons"
 fi
-
+export HISTSIZE=9999999
