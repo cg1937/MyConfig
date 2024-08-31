@@ -77,7 +77,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-vi-mode tmux zsh-syntax-highlighting zsh-autosuggestions autojump aliases)
+plugins=(git zsh-vi-mode zsh-syntax-highlighting zsh-autosuggestions autojump aliases)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -104,7 +104,8 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="nvim ~/.zshrc"
+alias zshconf="nvim ~/.zshrc"
+alias tmuxconf="nvim ~/.tmux.conf"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export PATH="$HOME/os-env/qemu-7.0.0/build/:$PATH"
 export PATH="$HOME/os-env/qemu-7.0.0/build/riscv64-softmmu:$PATH"
