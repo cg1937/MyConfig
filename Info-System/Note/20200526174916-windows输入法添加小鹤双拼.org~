@@ -1,5 +1,0 @@
-#+TITLE: windows输入法添加小鹤双拼
-首先打开[[file:20200526174222-注册表.org][注册表]]，找到这个路径
-计算机\HKEY_CURRENT_USER\Software\Microsoft\InputMethod\Settings\CHS
-然后新建一个名为 UserDefinedDoublePinyinScheme0的字符串值，数值数据为
-小鹤双拼*2*^*iuvdjhcwfg^xmlnpbksqszxkrltvyovt

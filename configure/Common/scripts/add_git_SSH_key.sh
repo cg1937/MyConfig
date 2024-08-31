@@ -1,4 +1,4 @@
-git config --global  user.name "cg1937"
+git config --global user.name "cg1937"
 git config --global user.email "522588429@qq.com"
 ssh-keygen -t rsa -C "522588429@qq.com"
 cat ~/.ssh/id_rsa.pub | xsel --clipboard
