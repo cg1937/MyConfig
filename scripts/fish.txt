@@ -1,4 +1,0 @@
-sudo apt-get install -y fish
-curl -L https://get.oh-my.fish | fish
-omf install batman
-chsh -s /usr/bin/fish
