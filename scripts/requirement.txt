@@ -1,0 +1,7 @@
+ext.sh need in ~/.local/
+
+# ext.sh some uncompress command package
+apt-get install -y \
+	p7zip-full # 7z \
+	lzop       # .lzo file uncompress \
+	rar        # .rar file uncompress

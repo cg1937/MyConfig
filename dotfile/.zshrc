@@ -106,17 +106,22 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 alias zshconf="nvim ~/.zshrc"
 alias tmuxconf="nvim ~/.tmux.conf"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-export PATH="$HOME/os-env/qemu-7.0.0/build/:$PATH"
-export PATH="$HOME/os-env/qemu-7.0.0/build/riscv64-softmmu:$PATH"
-export PATH="$HOME/os-env/qemu-7.0.0/build/riscv64-linux-user:$PATH"
-export PATH="/opt/qemu-x86_64/bin:$PATH"
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 if [ -x "$(command -v exa)" ]; then
     alias ls="exa --icons"
     alias ls="exa --long --all --header --group --icons"
 fi
+
+# Custom command
+function ext(){
+  ~/.local/ext.sh "$@"
+}
+
+# User custom configuration
+export PATH=~/.local/bin:$PATH
 export HISTSIZE=9999999
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Environment-specific configuration
