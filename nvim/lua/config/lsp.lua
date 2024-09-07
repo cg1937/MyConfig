@@ -43,6 +43,8 @@ local server_opts = {
 					-- or pull in all of 'runtimepath'. NOTE: this is a lot slower
 					-- library = vim.api.nvim_get_runtime_file("", true)
 				},
+				-- Note: Ignore Lus_LS's noisy `missing-fields` warnings. eg: treesitter.lua:1.
+				diagnostics = { disable = { "missing-fields" } },
 			},
 		},
 	},
