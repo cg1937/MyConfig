@@ -1,0 +1,10 @@
+SPACESHIP_PROMPT_ORDER=(
+  dir
+  host
+  git
+  python
+  exec_time
+  async
+  jobs
+  exit_code
+)

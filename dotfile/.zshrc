@@ -124,4 +124,19 @@ export HISTSIZE=9999999
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# 自动启动 tmux 并检查是否有已有的会话
+if command -v tmux > /dev/null; then
+  # 如果在 tmux 会话中则不做任何操作
+  if [[ -z "$TMUX" ]]; then
+    # 检查是否有可用的 tmux 会话
+    if tmux list-sessions &> /dev/null; then
+      # 如果有可用的会话，连接到第一个会话
+      tmux attach-session -t 0
+    else
+      # 如果没有可用会话，创建一个新会话
+      tmux new-session
+    fi
+  fi
+fi
+
 # Environment-specific configuration
