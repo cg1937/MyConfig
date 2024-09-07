@@ -29,3 +29,5 @@ opt.foldlevelstart = 99
 
 o.colorcolumn = "80"
 o.tabstop = 4
+o.expandtab = true
+o.shiftwidth = 4

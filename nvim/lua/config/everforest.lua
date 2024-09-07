@@ -1,4 +1,4 @@
 require("everforest").setup({
-	background = "medium",
-	italics = false,
+    background = "medium",
+    italics = false,
 })
