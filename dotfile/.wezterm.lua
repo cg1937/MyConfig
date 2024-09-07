@@ -1,4 +1,10 @@
 local wezterm = require("wezterm")
+local mux = wezterm.mux
+
+wezterm.on("gui-startup", function(cmd)
+  local tab, pane, window = mux.spawn_window(cmd or {})
+  window:gui_window():maximize()
+end)
 
 -- get the current platform
 local function get_platform()
@@ -24,17 +30,29 @@ local function get_title_with_icon(tab)
   end
 
   if string.find(title, 'wsl', 1, true) then
-    return '  WSL'
+    return '  WSL'
   elseif string.find(title, 'cmd', 1, true) then
     if string.find(title, 'Admin', 1, true) then
-      return '  Admin'
+      return '  Admin'
     else
-      return '  CMD'
+      return '  CMD'
     end
   elseif string.find(title, 'powershell', 1, true) then
-    return '  PS'
+    return '󰨊  PS'
   elseif string.find(title, 'PowerShell', 1, true) then
-    return '  Admin'
+    return '󰨊  Admin'
+  elseif string.find(title, 'nvim', 1, true) then
+    return '  NVIM'
+  elseif string.find(title, 'ssh', 1, true) then
+    return '󱘖  SSH'
+  elseif string.find(title, 'top', 1, true) then
+    return '󱎴  monitor'
+  elseif string.find(title, 'git', 1, true) then
+    return '󰊢  git'
+  elseif string.find(title, 'vim', 1, true) then
+    return '  vim'
+  elseif string.find(title, 'vi', 1, true) then
+    return '  vi'
   else
     return title
   end
@@ -111,24 +129,14 @@ return {
   check_for_updates = false,
   keys = {
     { key = 'v',  mods = 'CTRL', action = wezterm.action.PasteFrom 'Clipboard' },
-    { key = "F6", mods = "",     action = wezterm.action.ShowLauncher },
-    { key = "F7", mods = "",     action = wezterm.action({ ActivateTabRelative = -1 }) },
-    { key = "F8", mods = "",     action = wezterm.action({ ActivateTabRelative = 1 }) },
+    { key = "F6", mods = "CTRL", action = wezterm.action.ShowLauncher },
   },
   font_size = 13.5,
   font = wezterm.font_with_fallback({
     "IosevkaTerm Nerd Font",
     { family = "LXGW WenKai", scale = 1 },
   }),
-  ssh_domains = {
-    {
-      name = 'my.server',
-      remote_address = '192.168.1.1',
-      username = 'yourusername',
-      -- connect_automatically = true,
-      timeout = 30,
-    },
-  },
+  default_domain = 'WSL:Ubuntu-22.04',
   use_fancy_tab_bar = false,
   launch_menu = launch_menu_context(),
   window_background_opacity = 0.95,
