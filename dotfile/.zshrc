@@ -1,10 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -15,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -108,8 +101,8 @@ alias zshconf="nvim ~/.zshrc"
 alias tmuxconf="nvim ~/.tmux.conf"
 
 if [ -x "$(command -v exa)" ]; then
-    alias ls="exa --icons"
-    alias ls="exa --long --all --header --group --icons"
+  alias ls="exa --icons"
+  alias ls="exa --long --all --header --group --icons"
 fi
 
 # Custom command
@@ -121,22 +114,24 @@ function ext(){
 export PATH=~/.local/bin:$PATH
 export HISTSIZE=9999999
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# Environment-specific configuration
+export PATH="$HOME/os-env/qemu-7.0.0/build/:$PATH"
+export PATH="$HOME/os-env/qemu-7.0.0/build/riscv64-softmmu:$PATH"
+export PATH="$HOME/os-env/qemu-7.0.0/build/riscv64-linux-user:$PATH"
+export PATH="/opt/qemu-x86_64/bin:$PATH"
 
-# 自动启动 tmux 并检查是否有已有的会话
+# automatically start tmux and check for existing sessions
 if command -v tmux > /dev/null; then
-  # 如果在 tmux 会话中则不做任何操作
+  # Do nothing if already in a tmux session
   if [[ -z "$TMUX" ]]; then
-    # 检查是否有可用的 tmux 会话
+    # Check for available tmux sessions
     if tmux list-sessions &> /dev/null; then
-      # 如果有可用的会话，连接到第一个会话
       tmux attach-session -t 0
     else
-      # 如果没有可用会话，创建一个新会话
       tmux new-session
     fi
   fi
 fi
 
-# Environment-specific configuration
+# use starship theme
+eval "$(starship init zsh)"
