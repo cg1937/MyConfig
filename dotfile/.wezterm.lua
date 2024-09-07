@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 
 -- get the current platform
-local function platform()
+local function get_platform()
   if string.find(wezterm.target_triple, "windows", 1, true) then
     return "windows"
   elseif string.find(wezterm.target_triple, "darwin", 1, true) then
@@ -42,7 +42,7 @@ end
 
 -- return launch menu context via the platfrom
 local function launch_menu_context()
-  local platform = platform()
+  local platform = get_platform()
   if platform == "windows" then
     return {
       {
@@ -67,7 +67,7 @@ local SUB_IDX = {
   "₁", "₂", "₃", "₄", "₅", "₆", "₇", "₈", "₉", "₁₀",
 }
 
-wezterm.on("format-tab-title", function(tab, __tabs, __panes, __config, __hover, max_width)
+wezterm.on("format-tab-title", function(tab, _, _, _, _, max_width)
   local edge_background = "#333333"
   local background = "#333333"
   local foreground = "#333333"
