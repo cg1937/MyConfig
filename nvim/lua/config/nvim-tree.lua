@@ -159,7 +159,7 @@ require("nvim-tree").setup({
 	view = {
 		-- show line numbers in tree disabled
 		number = false,
-		relativenumber = false,
+		relativenumber = true,
 		-- width of the window, can be either a number (columns) or a string in `%`
 		width = 35,
 		-- side of the tree, can be one of 'left' | 'right' | 'top' | 'bottom'
