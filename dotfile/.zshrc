@@ -4,18 +4,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="powerlevel10k/powerlevel10k"
-
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -70,7 +58,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-vi-mode zsh-syntax-highlighting zsh-autosuggestions autojump aliases)
+plugins=(git zsh-vi-mode zsh-syntax-highlighting zsh-autosuggestions autojump 
+  aliases starship)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,13 +88,14 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 alias zshconf="nvim ~/.zshrc"
 alias tmuxconf="nvim ~/.tmux.conf"
+alias rez="source ~/.zshrc"
 
 if [ -x "$(command -v exa)" ]; then
   alias ls="exa --icons"
-  alias ls="exa --long --all --header --group --icons"
+  alias ll="exa --long --all --header --group --icons"
 fi
 
-# Custom command
+# Extract compressed file command
 function ext(){
   ~/.local/ext.sh "$@"
 }
@@ -115,10 +105,10 @@ export PATH=~/.local/bin:$PATH
 export HISTSIZE=9999999
 
 # Environment-specific configuration
-export PATH="$HOME/os-env/qemu-7.0.0/build/:$PATH"
-export PATH="$HOME/os-env/qemu-7.0.0/build/riscv64-softmmu:$PATH"
-export PATH="$HOME/os-env/qemu-7.0.0/build/riscv64-linux-user:$PATH"
-export PATH="/opt/qemu-x86_64/bin:$PATH"
+# export PATH="$HOME/os-env/qemu-7.0.0/build/:$PATH"
+# export PATH="$HOME/os-env/qemu-7.0.0/build/riscv64-softmmu:$PATH"
+# export PATH="$HOME/os-env/qemu-7.0.0/build/riscv64-linux-user:$PATH"
+# export PATH="/opt/qemu-x86_64/bin:$PATH"
 
 # automatically start tmux and check for existing sessions
 if command -v tmux > /dev/null; then
@@ -132,6 +122,3 @@ if command -v tmux > /dev/null; then
     fi
   fi
 fi
-
-# use starship theme
-eval "$(starship init zsh)"
