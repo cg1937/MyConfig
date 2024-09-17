@@ -18,7 +18,7 @@ Hydra({
         { "j", "5<C-w>-", { desc = "j/k height" } },
         { "h", "5<C-w>>" },
         { "l", "5<C-w><", { desc = " h/l width" } },
-        { "<Esc", nil, { exit = true } },
-        { "<CR", nil, { exit = true } },
+        { "<Esc>", nil, { exit = true } },
+        { "<CR>", nil, { exit = true } },
     },
 })
