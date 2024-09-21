@@ -1,10 +1,10 @@
 # On Linux/BSD
 # import = [
-#     "~/.config/alacritty/themes/everforest_dark.toml",
+#     "~/.config/alacritty/themes/github_light_default.toml",
 # ]
 # On Windows
 import = [
-    "C:\\Users\\chenc\\AppData\\Roaming\\alacritty\\themes\\everforest_dark.toml",
+    "C:\\Users\\chenc\\AppData\\Roaming\\alacritty\\themes\\github_light_default.toml",
 ]
 
 [shell]
@@ -23,10 +23,10 @@ history = 100000
 normal = { family = "IosevkaTerm Nerd Font", style = "Regular" }
 size = 12
 offset = { x = 1, y = 1 }
+glyph_offset = { x = 0, y = 1 }
 
 [selection]
 save_to_clipboard = true
-
 
 [[hints.enabled]]
 # On Linux/BSD
@@ -46,5 +46,4 @@ regex = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:
 bindings = [
     { key = "N", mods = "Control|Shift", action = "CreateNewWindow" },
     { key = "W", mods = "Control|Shift", action = "Quit" },
-    { key = "Space", mods = "Shift", action = "ToggleViMode" },
 ]

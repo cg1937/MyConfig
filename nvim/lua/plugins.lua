@@ -238,4 +238,12 @@ return {
             require("config.hydra")
         end,
     },
+    {
+        "nvim-orgmode/orgmode",
+        event = "VeryLazy",
+        ft = { "org" },
+        config = function()
+            require("config.orgmode")
+        end,
+    },
 }
