@@ -25,7 +25,7 @@ require("nvim-treesitter.configs").setup({
             node_decremental = "<S-TAB>",
         },
     },
-    -- indent = { enable = true },
+    indent = { enable = true },
     autopairs = { { enable = true } },
     textobjects = {
         select = {

@@ -43,9 +43,6 @@ return {
     {
         "kyazdani42/nvim-tree.lua",
         cmd = "NvimTreeToggle",
-        keys = {
-            { "tt", "<cmd>NvimTreeToggle<CR>", desc = "Toggle NvimTree" },
-        },
         dependencies = {
             "kyazdani42/nvim-web-devicons",
         },

@@ -12,7 +12,7 @@ Hydra({
         end,
     },
     mode = "n",
-    body = "ca",
+    body = "<leader>aw",
     heads = {
         { "k", "5<C-w>+" },
         { "j", "5<C-w>-", { desc = "j/k height" } },
