@@ -1,10 +1,10 @@
 # On Linux/BSD
 # import = [
-#     "~/.config/alacritty/themes/github_light_default.toml",
+#     "~/.config/alacritty/themes/github_light.toml",
 # ]
 # On Windows
 import = [
-    "C:\\Users\\chenc\\AppData\\Roaming\\alacritty\\themes\\github_light_default.toml",
+    "C:\\Users\\chenc\\AppData\\Roaming\\alacritty\\themes\\github_light.toml",
 ]
 
 [shell]
