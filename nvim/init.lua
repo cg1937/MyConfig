@@ -26,4 +26,4 @@ require("options")
 require("autocmds")
 
 -- Set favorite colorschemes
-vim.cmd("colorscheme everforest")
+vim.cmd("colorscheme github_light_default")

@@ -1,6 +1,26 @@
+local default_options = { noremap = true, silent = true }
 require("nvim-window").setup({
     -- The characters available for hinting windows.
-    chars = { "1", "2", "3", "4", "5", "6", "7", "8" },
+    chars = {
+        "f",
+        "j",
+        "d",
+        "k",
+        "s",
+        "l",
+        "a",
+        ";",
+        "c",
+        "m",
+        "r",
+        "u",
+        "e",
+        "i",
+        "w",
+        "o",
+        "q",
+        "p",
+    },
 
     -- A group to use for overwriting the Normal highlight group in the floating
     -- window. This can be used to change the background color.
@@ -11,13 +31,19 @@ require("nvim-window").setup({
     hint_hl = "Bold",
 
     -- The border style to use for the floating window.
-    border = "single",
+    border = {
+        "▛",
+        "▀",
+        "▜",
+        "▐",
+        "▟",
+        "▄",
+        "▙",
+        "▌",
+    },
 })
 
-local map = vim.api.nvim_set_keymap
-local default_options = { noremap = true, silent = true }
-
-map(
+vim.keymap.set(
     "n",
     "<leader>w",
     "<cmd>lua require('nvim-window').pick()<CR>",

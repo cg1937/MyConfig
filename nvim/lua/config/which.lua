@@ -3,7 +3,7 @@ local wk = require("which-key")
 wk.setup({})
 
 wk.add({
-    { "<leader>b", group = "Buffers" },
+    { "<leader>b", icon = " ", group = "Buffers" },
     {
         "<leader>bL",
         "<cmd>BufferLineSortByExtension<cr>",
@@ -39,26 +39,10 @@ wk.add({
         desc = "Sort BufferLines automatically by directory",
     },
 
-    { "<leader>f", group = "Files" },
-    {
-        "<leader>ff",
-        "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'fd', '--hidden', '--type', 'file', '--follow'}})<cr>",
-        desc = "Find File",
-    },
-    {
-        "<leader>fo",
-        "<cmd>Telescope oldfiles<cr>",
-        desc = "List previously open files",
-    },
-    {
-        "<leader>fl",
-        "<cmd>Telescope git_files<cr>",
-        desc = "Fuzzy search from `git ls-files`",
-    },
+    { "<leader>f", icon = " ", group = "Files" },
     { "<leader>fw", "<cmd>w<cr>", desc = "Save Buffer" },
 
     { "<leader>g", group = "Git" },
-    { "<leader>gB", "<cmd>GitBlameToggle<cr>", desc = "Toggle Blame" },
     {
         "<leader>gC",
         "<cmd>Telescope git_bcommits<cr>",

@@ -94,6 +94,7 @@ telescope.setup({
             "%.a",
             "%.ko",
             "%.tar.gz",
+            "%.o.cmd",
         },
         mappings = {
             i = {
@@ -216,9 +217,25 @@ local default_options = { noremap = true, silent = true }
 
 vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>", default_options)
 vim.keymap.set(
-    "v",
-    "<leader>fr",
-    "<cmd>Telescope git_bcommits_range<CR>",
+    "n",
+    "<leader>fd",
+    my_lsp_dynamic_workspace_symbols,
+    default_options
+)
+vim.keymap.set(
+    "n",
+    "<leader>ff",
+    ([[
+       <cmd>lua require'telescope.builtin'.find_files({
+           find_command = {
+               'fd',
+               '--hidden',
+               '--type',
+                'file',
+                '--follow'
+            }
+        })<cr>
+    ]]):gsub("^%s*(.-)%s*$", "%1"),
     default_options
 )
 vim.keymap.set(
@@ -228,10 +245,22 @@ vim.keymap.set(
     default_options
 )
 vim.keymap.set("n", "<leader>fk", my_lsp_references, default_options)
+vim.keymap.set(
+    "n",
+    "<leader>fl",
+    "<cmd>Telescope git_files<cr>",
+    default_options
+)
+vim.keymap.set(
+    "v",
+    "<leader>fr",
+    "<cmd>Telescope git_bcommits_range<CR>",
+    default_options
+)
 vim.keymap.set("n", "<leader>fs", my_live_grep, default_options)
 vim.keymap.set(
     "n",
-    "<leader>fd",
-    my_lsp_dynamic_workspace_symbols,
+    "<leader>fo",
+    "<cmd>Telescope oldfiles<cr>",
     default_options
 )

@@ -1,14 +1,16 @@
 return {
     {
-        "neanias/everforest-nvim",
+        "projekt0n/github-nvim-theme",
         lazy = false,
         priority = 1000,
-        config = function()
-            require("config.everforest")
-        end,
     },
 
-    { "rcarriga/nvim-notify" },
+    {
+        "rcarriga/nvim-notify",
+        config = function()
+            require("config.notify")
+        end,
+    },
 
     {
         "neovim/nvim-lspconfig",
@@ -45,7 +47,7 @@ return {
             { "tt", "<cmd>NvimTreeToggle<CR>", desc = "Toggle NvimTree" },
         },
         dependencies = {
-            "kyazdani42/nvim-web-devicons", -- optional, for file icon
+            "kyazdani42/nvim-web-devicons",
         },
         config = function()
             require("config.nvim-tree")
@@ -96,6 +98,9 @@ return {
         keys = {
             { "ts", "<cmd>Outline<CR>", desc = "Toggle Symbol Outline" },
         },
+        config = function()
+            require("config.outline")
+        end,
     },
 
     {
@@ -108,13 +113,6 @@ return {
 
     {
         "yorickpeterse/nvim-window",
-        keys = {
-            {
-                "<leader>w",
-                "<cmd>lua require('nvim-window').pick()<CR>",
-                desc = "nvim-window Selection",
-            },
-        },
         config = function()
             require("config.nvim-window")
         end,
@@ -144,6 +142,7 @@ return {
             require("config.mini-indentscope")
         end,
     },
+
     {
         "windwp/nvim-autopairs",
         event = "InsertEnter",
@@ -227,23 +226,32 @@ return {
             q_quit_log = "off",
         },
     },
+
     {
         "j-hui/fidget.nvim",
         config = true,
     },
+
     { "tpope/vim-sleuth" },
+
     {
         "anuvyklack/hydra.nvim",
         config = function()
             require("config.hydra")
         end,
     },
+
     {
-        "nvim-orgmode/orgmode",
-        event = "VeryLazy",
-        ft = { "org" },
+        "lewis6991/gitsigns.nvim",
         config = function()
-            require("config.orgmode")
+            require("config.gitsigns")
+        end,
+    },
+
+    {
+        "yamatsum/nvim-cursorline",
+        config = function()
+            require("config.nvim-cursorline")
         end,
     },
 }

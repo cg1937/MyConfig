@@ -1,3 +1,4 @@
+local default_options = { noremap = true, silent = true }
 local function on_attach(bufnr)
     local api = require("nvim-tree.api")
 
@@ -167,7 +168,7 @@ require("nvim-tree").setup({
             resize_window = true,
             window_picker = {
                 enable = true,
-                chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890",
+                chars = "fjdksla;cmrueiwoqp",
                 exclude = {
                     filetype = {
                         "notify",
@@ -238,6 +239,8 @@ require("nvim-tree").setup({
             "^\\.git",
             "^\\.gitignore$",
             "^modules.order$",
+            "^compile_commands.json$",
+            "\\.x509$",
         },
     },
     view = {
@@ -245,13 +248,10 @@ require("nvim-tree").setup({
         number = false,
         relativenumber = true,
         -- width of the window, can be either a number (columns) or a string in `%`
-        width = 35,
+        width = 40,
         -- side of the tree, can be one of 'left' | 'right' | 'top' | 'bottom'
         side = "left",
     },
 })
 
-local map = vim.api.nvim_set_keymap
-local default_options = { noremap = true, silent = true }
-
-map("n", "tt", "<cmd>NvimTreeToggle<cr>", default_options)
+vim.keymap.set("n", "tt", "<cmd>NvimTreeToggle<cr>", default_options)
