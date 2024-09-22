@@ -251,4 +251,11 @@ return {
             require("config.nvim-cursorline")
         end,
     },
+
+    {
+        "diegoulloao/nvim-file-location",
+        config = function()
+            require("config.nvim-file-location")
+        end,
+    },
 }
