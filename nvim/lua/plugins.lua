@@ -1,6 +1,6 @@
 return {
     {
-        "projekt0n/github-nvim-theme",
+        "ful1e5/github-nvim-theme",
         lazy = false,
         priority = 1000,
     },
@@ -109,7 +109,7 @@ return {
     },
 
     {
-        "yorickpeterse/nvim-window",
+        "cg1937/nvim-window",
         config = function()
             require("config.nvim-window")
         end,
@@ -147,14 +147,6 @@ return {
         opts = {
             disable_filetype = { "TelescopePrompt", "vim" },
         },
-    },
-
-    {
-        "ThePrimeagen/harpoon",
-        branch = "harpoon2",
-        config = function()
-            require("config.harpoon")
-        end,
     },
 
     {
@@ -246,7 +238,7 @@ return {
     },
 
     {
-        "yamatsum/nvim-cursorline",
+        "cg1937/nvim-cursorline",
         config = function()
             require("config.nvim-cursorline")
         end,
@@ -256,6 +248,15 @@ return {
         "diegoulloao/nvim-file-location",
         config = function()
             require("config.nvim-file-location")
+        end,
+    },
+
+    {
+        "akinsho/bufferline.nvim",
+        version = "*",
+        dependencies = "nvim-tree/nvim-web-devicons",
+        config = function()
+            require("config.bufferline")
         end,
     },
 }

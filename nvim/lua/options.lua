@@ -16,7 +16,7 @@ opt.relativenumber = true
 opt.termguicolors = true
 
 o.list = true
-opt.listchars:append("eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣")
+opt.listchars:append("eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:·")
 
 opt.wildignore = { "*.o", "*.cmd", "*~", "*.pyc" }
 opt.foldcolumn = "0"
