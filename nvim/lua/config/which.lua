@@ -195,6 +195,13 @@ wk.add({
     { "<leader>sk", "<cmd>Telescope keymaps<cr>", desc = "Keymaps" },
     { "<leader>sp", "<cmd>Telescope projects<cr>", desc = "Projects" },
 
+    {
+        "<leader>t",
+        icon = "󰙅 ",
+        group = "Nvim-Tree",
+        desc = "Toggle Nvim-Tree",
+    },
+
     { "<leader>z", icon = " ", group = "Spelling" },
     { "<leader>za", "zg", desc = "Add word" },
     { "<leader>zf", "1z=", desc = "Use 1. correction" },
