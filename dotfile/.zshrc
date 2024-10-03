@@ -59,7 +59,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-vi-mode zsh-syntax-highlighting zsh-autosuggestions autojump 
-  aliases starship)
+  aliases starship fzf-zsh-plugin zsh-eza)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -90,11 +90,6 @@ alias zshconf="nvim ~/.zshrc"
 alias tmuxconf="nvim ~/.tmux.conf"
 alias rez="source ~/.zshrc"
 
-if [ -x "$(command -v exa)" ]; then
-  alias ls="exa --icons"
-  alias ll="exa --long --all --header --group --icons"
-fi
-
 # Extract compressed file command
 function ext(){
   ~/.local/ext.sh "$@"
@@ -122,3 +117,5 @@ if command -v tmux > /dev/null; then
     fi
   fi
 fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
