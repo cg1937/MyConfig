@@ -4,18 +4,13 @@ local function file_name()
     return vim.fn.expand("%")
 end
 
-local function file_path()
-    return vim.fn.getcwd()
-end
-
 require("bufferline").setup({
     options = {
         offsets = {
             {
                 filetype = "NvimTree",
-                text = file_path(),
+                text = "",
                 highlight = "Directory",
-                text_align = "left",
                 separator = true,
             },
             {
@@ -23,6 +18,7 @@ require("bufferline").setup({
                 highlight = "BufferlineCustomeNvimtree",
                 text = "  [" .. file_name() .. "] Symbols Outline",
                 text_align = "left",
+                separator = true,
             },
         },
     },
