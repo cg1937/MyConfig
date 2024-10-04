@@ -87,6 +87,7 @@ fi
 #
 # Example aliases
 alias zshconf="nvim ~/.zshrc"
+alias nvimconf="nvim ~/.config/nvim/"
 alias tmuxconf="nvim ~/.tmux.conf"
 alias rez="source ~/.zshrc"
 alias gb='fzf-git-branch'
