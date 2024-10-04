@@ -89,6 +89,8 @@ source $ZSH/oh-my-zsh.sh
 alias zshconf="nvim ~/.zshrc"
 alias tmuxconf="nvim ~/.tmux.conf"
 alias rez="source ~/.zshrc"
+alias gb='fzf-git-branch'
+alias gco='fzf-git-checkout'
 
 # Extract compressed file command
 function ext(){
