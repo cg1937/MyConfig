@@ -29,7 +29,7 @@ require('autocmds')
 vim.cmd('colorscheme github_light')
 
 if vim.g.neovide then
-	vim.o.guifont = 'CaskaydiaCove Nerd Font:h15'
+	vim.o.guifont = 'CaskaydiaCove Nerd Font Mono:h14'
 	vim.g.neovide_refresh_rate = 60
 	vim.g.neovide_cursor_vfx_mode = 'railgun'
 	vim.g.neovide_cursor_vfx_particle_phase = 1.2
