@@ -20,9 +20,9 @@ startup_mode = "Maximized"
 history = 100000
 
 [font]
-normal = { family = "IosevkaTerm Nerd Font", style = "Regular" }
-size = 12
-offset = { x = 1, y = 1 }
+normal = { family = "CaskaydiaCove Nerd Font Mono", style = "Regular" }
+size = 14
+offset = { x = 0, y = 1 }
 glyph_offset = { x = 0, y = 1 }
 
 [selection]
