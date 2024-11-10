@@ -86,16 +86,30 @@ fi
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconf="nvim ~/.zshrc"
-alias nvimconf="nvim ~/.config/nvim/"
-alias tmuxconf="nvim ~/.tmux.conf"
-alias rez="source ~/.zshrc"
+alias zconf="nvim ~/.zshrc"
+alias nconf="nvim ~/.config/nvim/"
+alias tconf="nvim ~/.tmux.conf"
+alias rz="source ~/.zshrc"
 alias gb='fzf-git-branch'
 alias gco='fzf-git-checkout'
+alias tmux='tmux -u'
+alias n='nvim'
+alias nv='neovide --size=3840x2160'
+alias td='tmux detach'
+alias cat='bat --theme=GitHub'
 
 # Extract compressed file command
 function ext(){
   ~/.local/ext.sh "$@"
+}
+
+function y() {
+  local tmp="$(mktemp -t  "yazi-cwd.XXXXXX")"
+  yazi "$@" --cwd-file="$tmp"
+  if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+    builtin cd -- "$cwd"
+  fi
+  rm -f -- "$tmp"
 }
 
 # User custom configuration
