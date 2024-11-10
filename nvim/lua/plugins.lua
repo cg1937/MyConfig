@@ -258,14 +258,19 @@ return {
 		end,
 	},
 
-	{
-		'akinsho/bufferline.nvim',
-		version = '*',
-		dependencies = 'nvim-tree/nvim-web-devicons',
-		config = function()
-			require('config.bufferline')
-		end,
-	},
-
 	{ 'MunifTanjim/nui.nvim' },
+
+	{
+		'leath-dub/snipe.nvim',
+		keys = {
+			{
+				'gb',
+				function()
+					require('snipe').open_buffer_menu()
+				end,
+				desc = 'Open Snipe buffer menu',
+			},
+		},
+		opts = {},
+	},
 }

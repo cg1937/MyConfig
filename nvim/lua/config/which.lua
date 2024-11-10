@@ -7,33 +7,7 @@ wk.add({
 	{ '<leader>cl', desc = 'Copy Cursor Location' },
 
 	{ '<leader>b', icon = ' ', group = 'Buffer' },
-	{
-		'<leader>ba',
-		desc = 'Close all but the current buffer',
-	},
-	{ '<leader>bb', desc = 'Select the first visible buffer' },
-	{ '<leader>be', desc = 'Select the last visible buffer' },
-	{
-		'<leader>bl',
-		desc = 'Close all buffers to the left',
-	},
-	{ '<leader>bn', desc = 'Move buffer next' },
-	{ '<leader>bp', desc = 'Move buffer prev' },
-	{
-		'<leader>br',
-		desc = 'Close all BufferLines to the right',
-	},
-	{ '<leader>bs', desc = 'Pick buffer' },
 	{ '<leader>bw', '<cmd>w<cr>', desc = 'Save Buffer' },
-	{ '<leader>b1', desc = 'Buffer 1' },
-	{ '<leader>b2', desc = 'Buffer 2' },
-	{ '<leader>b3', desc = 'Buffer 3' },
-	{ '<leader>b4', desc = 'Buffer 4' },
-	{ '<leader>b5', desc = 'Buffer 5' },
-	{ '<leader>b6', desc = 'Buffer 6' },
-	{ '<leader>b7', desc = 'Buffer 7' },
-	{ '<leader>b8', desc = 'Buffer 8' },
-	{ '<leader>b9', desc = 'Buffer 9' },
 
 	{ '<leader>f', icon = '󰈞 ', group = 'Find' },
 	{ '<leader>fb', desc = 'Find buffer' },
